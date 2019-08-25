@@ -54,6 +54,7 @@ export class TourOfHeroesPage {
       var EC = protractor.ExpectedConditions;
       // Wait for new page url to contain newPageName
       browser.wait(EC.urlContains('/heroes'), 10000);
+      console.log("La aplicacion guardo");
     });
     browser.waitForAngular();
     browser.sleep(3000);
