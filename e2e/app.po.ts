@@ -28,7 +28,11 @@ export class TourOfHeroesPage {
 
   searchHero(hero:string){
     element(by.id('search-box')).sendKeys(hero);
-    return element(by.css('.search-result')).getText().then(function(text) {
+    return element.all(by.css('.search-result')).filter((text)=>{
+      return text.getText().then(function(val){
+        return val === hero;
+      })
+    }).first().getText().then(function(text){
       browser.sleep(2000);
       return text;
     });
