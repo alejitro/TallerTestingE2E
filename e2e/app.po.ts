@@ -33,7 +33,6 @@ export class TourOfHeroesPage {
         return val === hero;
       })
     }).first().getText().then(function(text){
-      browser.sleep(2000);
       return text;
     });
   }

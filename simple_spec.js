@@ -50,7 +50,7 @@ describe('Los estudiantes testing', function() {
       cy.get('.buscador').find('input').focus().type("Mario Linares Vasquez",{force:true})
       cy.get('[id^="react-select-"]').eq(1).contains("Mario Linares Vasquez").click()
     })
-    it('Visits teacher page and filter a subjetc', function() {
+    it('Visits teacher page and filter a subject', function() {
       cy.visit('https://losestudiantes.co/universidad-de-los-andes/ingenieria-de-sistemas/profesores/mario-linares-vasquez')
       cy.get('.statsProfesorDropdownItemChecked').find('input[name="id:MISO4208"]').check()
     })
